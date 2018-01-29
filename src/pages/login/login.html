@@ -1,0 +1,62 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>Login</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="signUp()" class="light">Sign up</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="login">
+  <ion-slides autoplay=3000 loop=true style="height:70%;width:100%;" zoom>
+  
+    <ion-slide style="background-color:black;">
+      <img src="assets/img/fp1.jpg" alt="">
+    </ion-slide>
+  
+    <ion-slide style="background-color:red;">
+      <img src="assets/img/fp2.jpg" alt="">
+    </ion-slide>
+  
+    <ion-slide>
+      <img src="assets/img/fp3.jpg" alt="">      
+    </ion-slide>
+  
+  </ion-slides>
+  <br>
+  <br><br>
+  <button ion-button (click)="fblogin()" round color="facebook" block class="margin-bottom" style="width:95%;text-align:center;">Login via Facebook</button>
+  <ion-card *ngIf="userData">
+    <ion-card-header>{{ userData.username }}</ion-card-header>
+    <img [src]="userData.picture" />
+    <ion-card-content>
+      <p>Email: {{ userData.email }}</p>
+      <p>First Name: {{ userData.first_name }}</p>
+    </ion-card-content>
+  </ion-card>
+  <!-- <button ion-button color="googleplus" block class="margin-top">Login via Google+</button>
+
+  <div text-center class="margin-top-20 secondary">OR LOGIN USING EMAIL</div>
+
+  <ion-list class="list-form">
+
+    <ion-item class="margin-top">
+      <ion-input type="text" placeholder="Email or username"></ion-input>
+    </ion-item>
+
+    <ion-item class="margin-top">
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button color="secondary" block (click)="login()">LOGIN</button>
+
+  <div text-center class="margin-top-20 secondary" (click)="forgotPwd()">Forgot password?</div> -->
+</ion-content>
